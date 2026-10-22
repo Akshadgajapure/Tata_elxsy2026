@@ -1,0 +1,13 @@
+.venv/
+.venv-linux/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+captures/
+experiment_results/
+# Raw captures / datasets must not be committed (privacy + licensing)
+*.pcap
+*.pcapng
+*.etl
+data/raw/

@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adaptive-qos-controller"
+version = "0.2.0"
+description = "Intent-aware adaptive QoS controller prototype with Flask dashboard"
+requires-python = ">=3.10"
+dependencies = ["flask>=3.0", "flask-socketio>=5.3", "simple-websocket>=1.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["qos_controller*", "web*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
