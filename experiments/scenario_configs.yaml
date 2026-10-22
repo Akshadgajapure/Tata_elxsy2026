@@ -1,0 +1,139 @@
+# ==============================================================================
+# TataElexy Adaptive QoS Engine: Versioned Scenario Configurations (PS3)
+# ==============================================================================
+# Format version: 1.0.0
+# Description: Deterministic workload specifications, impairment definitions,
+#              seeds, and kernel verification commands for reproducibility.
+
+metadata:
+  framework: "TataElexy PS3 Testbed"
+  version: "1.0.0"
+  deterministic_seed: 42
+  shaping_interface: "r-server"
+  router_namespace: "ns-router"
+  server_namespace: "ns-server"
+  server_ip: "10.10.9.10"
+
+scenarios:
+  - id: "iso_video_call"
+    name: "Scenario 1: Bulk ISO Download + Interactive VoIP/Video Call"
+    description: "Evaluates bufferbloat mitigation when high-volume bulk download competes with a low-latency voice call."
+    seed: 4201
+    n_trials: 10
+    bottleneck_capacity_mbps: 50.0
+    traffic:
+      - client: "bulk"
+        ip: "10.10.4.10"
+        namespace: "ns-bulk"
+        protocol: "tcp"
+        demand_mbps: 45.0
+        iperf_cmd: "ip netns exec ns-bulk iperf3 -c 10.10.9.10 -b 45M -t 30"
+      - client: "call"
+        ip: "10.10.1.10"
+        namespace: "ns-call"
+        protocol: "udp"
+        demand_mbps: 2.0
+        iperf_cmd: "ip netns exec ns-call iperf3 -u -c 10.10.9.10 -b 2M -l 160 -t 30"
+    impairments: []
+    expected_outcomes:
+      no_qos:
+        call_rtt_ms_range: [80.0, 250.0]
+        call_loss_pct_range: [2.0, 10.0]
+      adaptive_qos:
+        call_rtt_ms_range: [8.0, 18.0]
+        call_loss_pct_range: [0.0, 0.5]
+    verification_commands:
+      - "ip netns exec ns-router tc -s class show dev r-server"
+      - "ip netns exec ns-router tc -s qdisc show dev r-server"
+
+  - id: "capacity_drop"
+    name: "Scenario 2: Dynamic Link Capacity Drop (100 -> 20 Mbps)"
+    description: "Tests adaptive shaper tracking and fast downward revision under severe link degradation."
+    seed: 4202
+    n_trials: 10
+    initial_capacity_mbps: 100.0
+    impaired_capacity_mbps: 20.0
+    impairment_at_second: 10
+    traffic:
+      - client: "bulk"
+        ip: "10.10.4.10"
+        namespace: "ns-bulk"
+        demand_mbps: 70.0
+      - client: "gaming"
+        ip: "10.10.2.10"
+        namespace: "ns-gaming"
+        demand_mbps: 5.0
+    expected_outcomes:
+      adaptation_time_seconds: 3.0
+      starvation_observed: false
+    verification_commands:
+      - "ip netns exec ns-router tc class show dev r-server"
+
+  - id: "streams_gaming"
+    name: "Scenario 3: Multiple 4K Video Streams + Competitive Gaming"
+    description: "Validates FQ-CoDel queue isolation and bandwidth sharing under mixed elastic and real-time loads."
+    seed: 4203
+    n_trials: 10
+    bottleneck_capacity_mbps: 50.0
+    traffic:
+      - client: "stream"
+        ip: "10.10.3.10"
+        demand_mbps: 30.0
+      - client: "gaming"
+        ip: "10.10.2.10"
+        demand_mbps: 3.0
+      - client: "bulk"
+        ip: "10.10.4.10"
+        demand_mbps: 15.0
+    expected_outcomes:
+      gaming_jitter_ms_max: 3.0
+      stream_rebuffering_events: 0
+
+  - id: "multi_intent_conflict"
+    name: "Scenario 4: Conflicting User Intent Arbitration"
+    description: "Evaluates deterministic tie-breaking and policy stability when competing devices request priority."
+    seed: 4204
+    n_trials: 10
+    bottleneck_capacity_mbps: 50.0
+    intents:
+      - device: "client:call"
+        intent: "WORK_CALL"
+        duration_s: 60
+      - device: "client:gaming"
+        intent: "GAMING"
+        duration_s: 120
+    expected_outcomes:
+      arbitration_rule: "latest_expiry_wins_primary"
+      anti_starvation_guarantee: true
+
+  - id: "fairness_all_classes"
+    name: "Scenario 5: Simultaneous Six-Class Competing Workload"
+    description: "Measures Jain's Fairness Index across all 6 standardized traffic classes."
+    seed: 4205
+    n_trials: 10
+    bottleneck_capacity_mbps: 60.0
+    classes_active: ["real_time", "interactive", "adaptive_video", "bulk", "background", "unknown"]
+    expected_outcomes:
+      jains_fairness_index_min: 0.95
+      zero_throughput_classes: 0
+
+  - id: "starvation_prevention"
+    name: "Scenario 6: Hard Anti-Starvation Floor Verification"
+    description: "Asserts that low-priority background traffic maintains strictly non-zero bandwidth during complete saturation."
+    seed: 4206
+    n_trials: 10
+    bottleneck_capacity_mbps: 20.0
+    overload_demand_mbps: 80.0
+    expected_outcomes:
+      background_throughput_mbps_min: 0.4
+      time_starved_seconds: 0.0
+
+  - id: "adaptation_speed"
+    name: "Scenario 7: Rapid Dynamic Step-Load Adaptation"
+    description: "Measures transient response and convergence time during bursty traffic step changes."
+    seed: 4207
+    n_trials: 10
+    bottleneck_capacity_mbps: 50.0
+    expected_outcomes:
+      convergence_ticks_max: 2
+      overshoot_pct_max: 5.0

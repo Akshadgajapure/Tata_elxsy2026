@@ -1,0 +1,16 @@
+scenario_id,scenario_name,timestamp,mode,metric,value,unit
+streams_gaming,Multiple Streams + Low-Latency Gaming,2026-10-18 19:46:57 UTC,no_qos,gaming_latency_ms,84.8,ms
+streams_gaming,Multiple Streams + Low-Latency Gaming,2026-10-18 19:46:57 UTC,no_qos,gaming_jitter_ms,18.2,ms
+streams_gaming,Multiple Streams + Low-Latency Gaming,2026-10-18 19:46:57 UTC,no_qos,stream_fairness_index,0.888,score
+streams_gaming,Multiple Streams + Low-Latency Gaming,2026-10-18 19:46:57 UTC,no_qos,total_throughput_mbps,24.8,Mbps
+streams_gaming,Multiple Streams + Low-Latency Gaming,2026-10-18 19:46:57 UTC,no_qos,provenance,10-trial discrete queueing sample mean,count
+streams_gaming,Multiple Streams + Low-Latency Gaming,2026-10-18 19:46:57 UTC,static_qos,gaming_latency_ms,22.0,ms
+streams_gaming,Multiple Streams + Low-Latency Gaming,2026-10-18 19:46:57 UTC,static_qos,gaming_jitter_ms,3.4,ms
+streams_gaming,Multiple Streams + Low-Latency Gaming,2026-10-18 19:46:57 UTC,static_qos,stream_fairness_index,0.91,score
+streams_gaming,Multiple Streams + Low-Latency Gaming,2026-10-18 19:46:57 UTC,static_qos,total_throughput_mbps,21.0,Mbps
+streams_gaming,Multiple Streams + Low-Latency Gaming,2026-10-18 19:46:57 UTC,static_qos,provenance,10-trial discrete queueing sample mean,count
+streams_gaming,Multiple Streams + Low-Latency Gaming,2026-10-18 19:46:57 UTC,adaptive_qos,gaming_latency_ms,11.2,ms
+streams_gaming,Multiple Streams + Low-Latency Gaming,2026-10-18 19:46:57 UTC,adaptive_qos,gaming_jitter_ms,1.1,ms
+streams_gaming,Multiple Streams + Low-Latency Gaming,2026-10-18 19:46:57 UTC,adaptive_qos,stream_fairness_index,0.983,score
+streams_gaming,Multiple Streams + Low-Latency Gaming,2026-10-18 19:46:57 UTC,adaptive_qos,total_throughput_mbps,24.6,Mbps
+streams_gaming,Multiple Streams + Low-Latency Gaming,2026-10-18 19:46:57 UTC,adaptive_qos,provenance,10-trial discrete queueing sample mean,count

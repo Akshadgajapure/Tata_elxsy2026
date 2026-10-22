@@ -1,0 +1,10 @@
+scenario_id,scenario_name,timestamp,mode,metric,value,unit
+work_call_intent,Temporary Work-Call Intent,2026-10-18 19:46:57 UTC,no_qos,real_time_rate_mbps,6.8,Mbps
+work_call_intent,Temporary Work-Call Intent,2026-10-18 19:46:57 UTC,no_qos,background_rate_mbps,0.4,Mbps
+work_call_intent,Temporary Work-Call Intent,2026-10-18 19:46:57 UTC,no_qos,intent_honored,False,count
+work_call_intent,Temporary Work-Call Intent,2026-10-18 19:46:57 UTC,static_qos,real_time_rate_mbps,15.0,Mbps
+work_call_intent,Temporary Work-Call Intent,2026-10-18 19:46:57 UTC,static_qos,background_rate_mbps,1.2,Mbps
+work_call_intent,Temporary Work-Call Intent,2026-10-18 19:46:57 UTC,static_qos,intent_honored,False,count
+work_call_intent,Temporary Work-Call Intent,2026-10-18 19:46:57 UTC,adaptive_qos,real_time_rate_mbps,15.0,Mbps
+work_call_intent,Temporary Work-Call Intent,2026-10-18 19:46:57 UTC,adaptive_qos,background_rate_mbps,2.0,Mbps
+work_call_intent,Temporary Work-Call Intent,2026-10-18 19:46:57 UTC,adaptive_qos,intent_honored,True,count

@@ -1,0 +1,19 @@
+scenario_id,scenario_name,timestamp,mode,metric,value,unit
+iso_video_call,ISO Download + Interactive Call,2026-10-18 19:46:56 UTC,no_qos,call_rtt_ms,69.3,ms
+iso_video_call,ISO Download + Interactive Call,2026-10-18 19:46:56 UTC,no_qos,call_jitter_ms,28.4,ms
+iso_video_call,ISO Download + Interactive Call,2026-10-18 19:46:56 UTC,no_qos,call_packet_loss_pct,4.2,%
+iso_video_call,ISO Download + Interactive Call,2026-10-18 19:46:56 UTC,no_qos,bulk_throughput_mbps,46.6,Mbps
+iso_video_call,ISO Download + Interactive Call,2026-10-18 19:46:56 UTC,no_qos,queue_depth_packets,228,count
+iso_video_call,ISO Download + Interactive Call,2026-10-18 19:46:56 UTC,no_qos,provenance,10-trial discrete queueing sample mean,count
+iso_video_call,ISO Download + Interactive Call,2026-10-18 19:46:56 UTC,static_qos,call_rtt_ms,17.0,ms
+iso_video_call,ISO Download + Interactive Call,2026-10-18 19:46:56 UTC,static_qos,call_jitter_ms,2.1,ms
+iso_video_call,ISO Download + Interactive Call,2026-10-18 19:46:56 UTC,static_qos,call_packet_loss_pct,0.0,%
+iso_video_call,ISO Download + Interactive Call,2026-10-18 19:46:56 UTC,static_qos,bulk_throughput_mbps,22.0,Mbps
+iso_video_call,ISO Download + Interactive Call,2026-10-18 19:46:56 UTC,static_qos,queue_depth_packets,25,count
+iso_video_call,ISO Download + Interactive Call,2026-10-18 19:46:56 UTC,static_qos,provenance,10-trial discrete queueing sample mean,count
+iso_video_call,ISO Download + Interactive Call,2026-10-18 19:46:56 UTC,adaptive_qos,call_rtt_ms,12.7,ms
+iso_video_call,ISO Download + Interactive Call,2026-10-18 19:46:56 UTC,adaptive_qos,call_jitter_ms,1.4,ms
+iso_video_call,ISO Download + Interactive Call,2026-10-18 19:46:56 UTC,adaptive_qos,call_packet_loss_pct,0.0,%
+iso_video_call,ISO Download + Interactive Call,2026-10-18 19:46:56 UTC,adaptive_qos,bulk_throughput_mbps,42.5,Mbps
+iso_video_call,ISO Download + Interactive Call,2026-10-18 19:46:56 UTC,adaptive_qos,queue_depth_packets,9,count
+iso_video_call,ISO Download + Interactive Call,2026-10-18 19:46:56 UTC,adaptive_qos,provenance,10-trial discrete queueing sample mean,count

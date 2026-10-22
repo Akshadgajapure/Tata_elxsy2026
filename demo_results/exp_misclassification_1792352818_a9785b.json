@@ -1,0 +1,110 @@
+{
+  "job_id": "exp_misclassification_1792352818_a9785b",
+  "scenario_id": "misclassification",
+  "scenario_name": "Misclassification & Manual Correction",
+  "description": "Injects uncertain flow metadata, observes confidence score, applies manual user override, and checks policy adaptation.",
+  "timestamp": "2026-10-18 19:46:58 UTC",
+  "duration_seconds": 20.0,
+  "comparisons": {
+    "unassisted_classifier": {
+      "initial_class": "unknown",
+      "initial_confidence": 0.45,
+      "manual_override_applied": false
+    },
+    "user_corrected": {
+      "initial_class": "unknown",
+      "corrected_class": "real_time",
+      "corrected_confidence": 1.0,
+      "manual_override_applied": true
+    }
+  },
+  "summary_text": "Ambiguous encrypted flow was classified as unknown with low confidence (0.45). User manual correction via API successfully re-bound the flow to Real-Time with 1.0 confidence.",
+  "environment": {
+    "execution_mode": "Algorithmic Queueing Simulation (Reproducible Discrete-Event Model)",
+    "platform": "Windows 10",
+    "enforcement_backend": "dry_run",
+    "python_version": "3.11.6"
+  },
+  "raw_measurements": [
+    {
+      "trial": 1,
+      "flow": "Encrypted UDP audio stream",
+      "initial_class": "unknown",
+      "initial_confidence": 0.45,
+      "corrected_class": "real_time",
+      "corrected_confidence": 1.0
+    },
+    {
+      "trial": 2,
+      "flow": "Encrypted UDP audio stream",
+      "initial_class": "unknown",
+      "initial_confidence": 0.45,
+      "corrected_class": "real_time",
+      "corrected_confidence": 1.0
+    },
+    {
+      "trial": 3,
+      "flow": "Encrypted UDP audio stream",
+      "initial_class": "unknown",
+      "initial_confidence": 0.45,
+      "corrected_class": "real_time",
+      "corrected_confidence": 1.0
+    },
+    {
+      "trial": 4,
+      "flow": "Encrypted UDP audio stream",
+      "initial_class": "unknown",
+      "initial_confidence": 0.45,
+      "corrected_class": "real_time",
+      "corrected_confidence": 1.0
+    },
+    {
+      "trial": 5,
+      "flow": "Encrypted UDP audio stream",
+      "initial_class": "unknown",
+      "initial_confidence": 0.45,
+      "corrected_class": "real_time",
+      "corrected_confidence": 1.0
+    },
+    {
+      "trial": 6,
+      "flow": "Encrypted UDP audio stream",
+      "initial_class": "unknown",
+      "initial_confidence": 0.45,
+      "corrected_class": "real_time",
+      "corrected_confidence": 1.0
+    },
+    {
+      "trial": 7,
+      "flow": "Encrypted UDP audio stream",
+      "initial_class": "unknown",
+      "initial_confidence": 0.45,
+      "corrected_class": "real_time",
+      "corrected_confidence": 1.0
+    },
+    {
+      "trial": 8,
+      "flow": "Encrypted UDP audio stream",
+      "initial_class": "unknown",
+      "initial_confidence": 0.45,
+      "corrected_class": "real_time",
+      "corrected_confidence": 1.0
+    },
+    {
+      "trial": 9,
+      "flow": "Encrypted UDP audio stream",
+      "initial_class": "unknown",
+      "initial_confidence": 0.45,
+      "corrected_class": "real_time",
+      "corrected_confidence": 1.0
+    },
+    {
+      "trial": 10,
+      "flow": "Encrypted UDP audio stream",
+      "initial_class": "unknown",
+      "initial_confidence": 0.45,
+      "corrected_class": "real_time",
+      "corrected_confidence": 1.0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "job_id": "exp_hotspot_observation_1792352819_e60f92",
+  "scenario_id": "hotspot_observation",
+  "scenario_name": "Hotspot Client Observation",
+  "description": "Evaluates real captured or ingested hotspot traffic metadata, measuring device discovery, per-flow classification, and upload/download split.",
+  "timestamp": "2026-10-18 19:46:59 UTC",
+  "duration_seconds": 20.0,
+  "comparisons": {
+    "observation_mode": {
+      "status": "active",
+      "traffic_isolated": true,
+      "enforcement_attempted": false
+    }
+  },
+  "summary_text": "Hotspot client observation ran successfully in observation-only mode.",
+  "environment": {
+    "execution_mode": "Algorithmic Queueing Simulation (Reproducible Discrete-Event Model)",
+    "platform": "Windows 10",
+    "enforcement_backend": "dry_run",
+    "python_version": "3.11.6"
+  },
+  "raw_measurements": []
+}

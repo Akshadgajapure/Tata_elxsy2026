@@ -1,0 +1,120 @@
+{
+  "job_id": "exp_capacity_drop_1792352816_7b065f",
+  "scenario_id": "capacity_drop",
+  "scenario_name": "Capacity Drop (100 -> 20 Mbit/s)",
+  "description": "Bottleneck capacity suddenly drops from 100 Mbps to 20 Mbps. Measures adaptation latency and policy stabilization speed.",
+  "timestamp": "2026-10-18 19:46:56 UTC",
+  "duration_seconds": 30.0,
+  "comparisons": {
+    "no_qos": {
+      "time_to_adapt_s": Infinity,
+      "packet_drop_rate_pps": 1221.0,
+      "queue_delay_ms": 173.5,
+      "starved_classes": 3,
+      "provenance": "10-trial discrete queueing sample mean"
+    },
+    "static_qos": {
+      "time_to_adapt_s": 0.0,
+      "packet_drop_rate_pps": 807.9,
+      "queue_delay_ms": 94.0,
+      "starved_classes": 2,
+      "provenance": "10-trial discrete queueing sample mean"
+    },
+    "adaptive_qos": {
+      "time_to_adapt_s": 1.8,
+      "packet_drop_rate_pps": 38.9,
+      "queue_delay_ms": 14.4,
+      "starved_classes": 0,
+      "provenance": "10-trial discrete queueing sample mean"
+    }
+  },
+  "summary_text": "Across 10 trials of 100 -> 20 Mbps capacity drop, No QoS dropped 1221.0 pps. Adaptive QoS converged in 1.8s, cutting packet drops to 38.9 pps and preserving starvation floors for all classes.",
+  "environment": {
+    "execution_mode": "Algorithmic Queueing Simulation (Reproducible Discrete-Event Model)",
+    "platform": "Windows 10",
+    "enforcement_backend": "dry_run",
+    "python_version": "3.11.6"
+  },
+  "raw_measurements": [
+    {
+      "trial": 1,
+      "condition": "Capacity 100M -> 20M (Bulk 70M + Gaming 5M)",
+      "no_qos_drop_pps": 1261.3,
+      "static_qos_drop_pps": 810.0,
+      "adaptive_qos_drop_pps": 39.8,
+      "adaptive_queue_delay_ms": 13.4
+    },
+    {
+      "trial": 2,
+      "condition": "Capacity 100M -> 20M (Bulk 70M + Gaming 5M)",
+      "no_qos_drop_pps": 1193.5,
+      "static_qos_drop_pps": 803.6,
+      "adaptive_qos_drop_pps": 42.6,
+      "adaptive_queue_delay_ms": 15.0
+    },
+    {
+      "trial": 3,
+      "condition": "Capacity 100M -> 20M (Bulk 70M + Gaming 5M)",
+      "no_qos_drop_pps": 1176.8,
+      "static_qos_drop_pps": 786.1,
+      "adaptive_qos_drop_pps": 42.7,
+      "adaptive_queue_delay_ms": 14.4
+    },
+    {
+      "trial": 4,
+      "condition": "Capacity 100M -> 20M (Bulk 70M + Gaming 5M)",
+      "no_qos_drop_pps": 1221.7,
+      "static_qos_drop_pps": 849.5,
+      "adaptive_qos_drop_pps": 33.3,
+      "adaptive_queue_delay_ms": 14.7
+    },
+    {
+      "trial": 5,
+      "condition": "Capacity 100M -> 20M (Bulk 70M + Gaming 5M)",
+      "no_qos_drop_pps": 1274.6,
+      "static_qos_drop_pps": 824.5,
+      "adaptive_qos_drop_pps": 42.1,
+      "adaptive_queue_delay_ms": 12.8
+    },
+    {
+      "trial": 6,
+      "condition": "Capacity 100M -> 20M (Bulk 70M + Gaming 5M)",
+      "no_qos_drop_pps": 1250.2,
+      "static_qos_drop_pps": 843.2,
+      "adaptive_qos_drop_pps": 42.1,
+      "adaptive_queue_delay_ms": 15.0
+    },
+    {
+      "trial": 7,
+      "condition": "Capacity 100M -> 20M (Bulk 70M + Gaming 5M)",
+      "no_qos_drop_pps": 1203.4,
+      "static_qos_drop_pps": 846.0,
+      "adaptive_qos_drop_pps": 35.9,
+      "adaptive_queue_delay_ms": 14.5
+    },
+    {
+      "trial": 8,
+      "condition": "Capacity 100M -> 20M (Bulk 70M + Gaming 5M)",
+      "no_qos_drop_pps": 1250.8,
+      "static_qos_drop_pps": 785.6,
+      "adaptive_qos_drop_pps": 36.5,
+      "adaptive_queue_delay_ms": 14.8
+    },
+    {
+      "trial": 9,
+      "condition": "Capacity 100M -> 20M (Bulk 70M + Gaming 5M)",
+      "no_qos_drop_pps": 1178.2,
+      "static_qos_drop_pps": 762.8,
+      "adaptive_qos_drop_pps": 35.0,
+      "adaptive_queue_delay_ms": 14.6
+    },
+    {
+      "trial": 10,
+      "condition": "Capacity 100M -> 20M (Bulk 70M + Gaming 5M)",
+      "no_qos_drop_pps": 1199.2,
+      "static_qos_drop_pps": 767.2,
+      "adaptive_qos_drop_pps": 39.4,
+      "adaptive_queue_delay_ms": 14.5
+    }
+  ]
+}

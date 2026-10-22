@@ -1,0 +1,13 @@
+filter protocol ip pref 10 u32 chain 0 
+filter protocol ip pref 10 u32 chain 0 fh 800: ht divisor 1 
+filter protocol ip pref 10 u32 chain 0 fh 800::800 order 2048 key ht 800 bkt 0 *flowid 1:40 not_in_hw 
+  match 0a0a040a/ffffffff at 12
+filter protocol ip pref 10 u32 chain 0 fh 800::801 order 2049 key ht 800 bkt 0 *flowid 1:10 not_in_hw 
+  match 0a0a020a/ffffffff at 12
+filter protocol ipv6 pref 11 u32 chain 0 
+filter protocol ipv6 pref 11 u32 chain 0 fh 801: ht divisor 1 
+filter protocol ipv6 pref 11 u32 chain 0 fh 801::800 order 2048 key ht 801 bkt 0 *flowid 1:40 not_in_hw 
+  match fd000004/ffffffff at 8
+  match 00000000/ffffffff at 12
+  match 00000000/ffffffff at 16
+  match 00000010/ffffffff at 20

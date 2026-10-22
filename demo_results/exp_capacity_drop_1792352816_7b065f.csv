@@ -1,0 +1,16 @@
+scenario_id,scenario_name,timestamp,mode,metric,value,unit
+capacity_drop,Capacity Drop (100 -> 20 Mbit/s),2026-10-18 19:46:56 UTC,no_qos,time_to_adapt_s,inf,count
+capacity_drop,Capacity Drop (100 -> 20 Mbit/s),2026-10-18 19:46:56 UTC,no_qos,packet_drop_rate_pps,1221.0,Mbps
+capacity_drop,Capacity Drop (100 -> 20 Mbit/s),2026-10-18 19:46:56 UTC,no_qos,queue_delay_ms,173.5,count
+capacity_drop,Capacity Drop (100 -> 20 Mbit/s),2026-10-18 19:46:56 UTC,no_qos,starved_classes,3,count
+capacity_drop,Capacity Drop (100 -> 20 Mbit/s),2026-10-18 19:46:56 UTC,no_qos,provenance,10-trial discrete queueing sample mean,count
+capacity_drop,Capacity Drop (100 -> 20 Mbit/s),2026-10-18 19:46:56 UTC,static_qos,time_to_adapt_s,0.0,count
+capacity_drop,Capacity Drop (100 -> 20 Mbit/s),2026-10-18 19:46:56 UTC,static_qos,packet_drop_rate_pps,807.9,Mbps
+capacity_drop,Capacity Drop (100 -> 20 Mbit/s),2026-10-18 19:46:56 UTC,static_qos,queue_delay_ms,94.0,count
+capacity_drop,Capacity Drop (100 -> 20 Mbit/s),2026-10-18 19:46:56 UTC,static_qos,starved_classes,2,count
+capacity_drop,Capacity Drop (100 -> 20 Mbit/s),2026-10-18 19:46:56 UTC,static_qos,provenance,10-trial discrete queueing sample mean,count
+capacity_drop,Capacity Drop (100 -> 20 Mbit/s),2026-10-18 19:46:56 UTC,adaptive_qos,time_to_adapt_s,1.8,count
+capacity_drop,Capacity Drop (100 -> 20 Mbit/s),2026-10-18 19:46:56 UTC,adaptive_qos,packet_drop_rate_pps,38.9,Mbps
+capacity_drop,Capacity Drop (100 -> 20 Mbit/s),2026-10-18 19:46:56 UTC,adaptive_qos,queue_delay_ms,14.4,count
+capacity_drop,Capacity Drop (100 -> 20 Mbit/s),2026-10-18 19:46:56 UTC,adaptive_qos,starved_classes,0,count
+capacity_drop,Capacity Drop (100 -> 20 Mbit/s),2026-10-18 19:46:56 UTC,adaptive_qos,provenance,10-trial discrete queueing sample mean,count

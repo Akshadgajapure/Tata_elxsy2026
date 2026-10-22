@@ -1,0 +1,8 @@
+scenario_id,scenario_name,timestamp,mode,metric,value,unit
+misclassification,Misclassification & Manual Correction,2026-10-18 19:46:58 UTC,unassisted_classifier,initial_class,unknown,count
+misclassification,Misclassification & Manual Correction,2026-10-18 19:46:58 UTC,unassisted_classifier,initial_confidence,0.45,count
+misclassification,Misclassification & Manual Correction,2026-10-18 19:46:58 UTC,unassisted_classifier,manual_override_applied,False,count
+misclassification,Misclassification & Manual Correction,2026-10-18 19:46:58 UTC,user_corrected,initial_class,unknown,count
+misclassification,Misclassification & Manual Correction,2026-10-18 19:46:58 UTC,user_corrected,corrected_class,real_time,count
+misclassification,Misclassification & Manual Correction,2026-10-18 19:46:58 UTC,user_corrected,corrected_confidence,1.0,count
+misclassification,Misclassification & Manual Correction,2026-10-18 19:46:58 UTC,user_corrected,manual_override_applied,True,count

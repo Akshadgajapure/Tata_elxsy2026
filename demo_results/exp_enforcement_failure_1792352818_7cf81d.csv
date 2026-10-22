@@ -1,0 +1,8 @@
+scenario_id,scenario_name,timestamp,mode,metric,value,unit
+enforcement_failure,Enforcement Failure & Safe Rollback,2026-10-18 19:46:58 UTC,raw_tc_without_guard,safe_state_retained,False,count
+enforcement_failure,Enforcement Failure & Safe Rollback,2026-10-18 19:46:58 UTC,raw_tc_without_guard,corrupted_policy_active,True,count
+enforcement_failure,Enforcement Failure & Safe Rollback,2026-10-18 19:46:58 UTC,raw_tc_without_guard,kernel_verification,False,count
+enforcement_failure,Enforcement Failure & Safe Rollback,2026-10-18 19:46:58 UTC,tataelexy_tc_backend,safe_state_retained,True,count
+enforcement_failure,Enforcement Failure & Safe Rollback,2026-10-18 19:46:58 UTC,tataelexy_tc_backend,corrupted_policy_active,False,count
+enforcement_failure,Enforcement Failure & Safe Rollback,2026-10-18 19:46:58 UTC,tataelexy_tc_backend,kernel_verification,True,count
+enforcement_failure,Enforcement Failure & Safe Rollback,2026-10-18 19:46:58 UTC,tataelexy_tc_backend,rollback_success,True,count

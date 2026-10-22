@@ -1,0 +1,4 @@
+scenario_id,scenario_name,timestamp,mode,metric,value,unit
+hotspot_observation,Hotspot Client Observation,2026-10-18 19:46:59 UTC,observation_mode,status,active,count
+hotspot_observation,Hotspot Client Observation,2026-10-18 19:46:59 UTC,observation_mode,traffic_isolated,True,count
+hotspot_observation,Hotspot Client Observation,2026-10-18 19:46:59 UTC,observation_mode,enforcement_attempted,False,count
